@@ -1,14 +1,41 @@
-<ul>
-    <li>
-        <b>{{product.serial}}</b>
-    </li>
-    <li>
-        <b>{{product.name}}</b>
-    </li>
-    <li>
-        <b>{{product.price}}</b>
-    </li>
-    <li>
-        <b>{{product.supplier}}</b>
-    </li>
-</ul>
+<link rel="stylesheet" href="css/prodDir.css">
+
+<div class="thumbnail">
+    
+    <div id="prodPane">
+        
+        
+        <div id="tst">
+            
+            <div>
+                <img src="pics/2%20%D7%A4%D7%A1%D7%9C%D7%99%D7%9D.jpg" 
+                 id="prodImg" 
+                 width="300px" 
+                 height="300px"
+                 onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100;" 
+		         onmouseover="this.style.opacity=0.6;this.filters.alpha.opacity=60">
+            </div>
+            <div>
+                
+                
+                <p>{{product.details}}</p>
+                
+                
+                
+                <div class="price"><p>{{product.price | currency:'₪':2}}</p></div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            
+            
+        </div>
+        
+        <br>
+        <div id="dtls">
+            <div id="details" class="well well-sm center-block">
+                <div id="prodName">
+                    <b> {{product.name}} </b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
